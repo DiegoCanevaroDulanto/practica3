@@ -1,0 +1,80 @@
+@{
+    ViewData["Title"] = "Registro";
+}
+@model Productos
+
+
+    <div style="margin-top: 15px;">
+        <ul class="nav nav-tabs dark">
+            <li class="nav-item">
+                <a class="nav-link" asp-action="ListaProductos">Lista de Productos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" asp-action="RegistroProductos">Registro de productos</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container h-100">
+		  
+          <h2 style="text-align: center; margin-top: 95px;">Registra el nuevo producto</h2>
+
+          <form action="" method="post">        
+
+            <div class="container h-100">
+
+              <div class="form-group">
+                <label asp-for="nombre"></label>
+                <input type="text" asp-for="nombre" class="form-control" placeholder="Ingrese nombre del producto">
+                <span asp-validation-for="nombre" class="text-danger"></span>  
+              </div>
+              <div class="form-group">
+                <label asp-for="imagen"></label>
+                <input type="text" asp-for="imagen" class="form-control" placeholder="Ingrese url de imagen">
+                <span asp-validation-for="imagen" class="text-danger"></span>
+              </div>              
+              <div class="form-group">
+                <label asp-for="descripcion"></label>
+                <input type="text" asp-for="descripcion" class="form-control" placeholder="Ingrese una descripcion del producto">
+                <span asp-validation-for="descripcion" class="text-danger"></span>
+              </div>              
+              <div class="form-group">
+                <label asp-for="precio"></label>
+                <input type="text" asp-for="precio" class="form-control" placeholder="Ingrese el precio del producto">
+                <span asp-validation-for="precio" class="text-danger"></span>
+              </div>
+              <div class="form-group">
+                <label asp-for="celular"></label>
+                <input type="text" asp-for="celular" class="form-control" placeholder="Ingrese número de celular">
+                <span asp-validation-for="celular" class="text-danger"></span>
+              </div>
+              <div class="form-group">
+                <label asp-for="lugar"></label>
+                <input type="text" asp-for="lugar" class="form-control" placeholder="Ingrese el lugar de compra">
+                <span asp-validation-for="lugar" class="text-danger"></span>
+              </div>
+              <div class="form-group">
+                <label asp-for="usuario"></label>
+                <input type="text" asp-for="usuario" class="form-control" placeholder="USERNAME">
+                <span asp-validation-for="usuario" class="text-danger"></span>
+              </div>
+              <div class="form-group">
+              <label asp-for="categoria"></label>
+              <select type="text" asp-for="categoria" class="form-control">
+                    <option value ="Tecnologia">Tecnologia</option>
+                    <option value ="Arte">Arte</option>
+                    <option value ="Ropa">Ropa</option>
+                    <option value ="Muebles del Hogar">Muebles del Hogar</option>
+              </select> 
+            </div>
+                          
+                  <div class="d-flex justify-content-center mt-3 login_container">
+                    <button type="submit" name="button" class="btn btn-primary" style="margin-top: 20px;">Registrar</button>
+                  </div>
+            </div>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+

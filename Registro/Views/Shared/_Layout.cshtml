@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] CANEVARO STORE</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    <header>
+
+    
+         <!--Navbar-->
+        <nav class="navbar navbar-light light-blue lighten-4" style="background-color: #51A058;">
+
+        <!-- Navbar brand -->
+
+        <!-- IMAGEN LOGO -->
+        <a  asp-controller="Index" asp-action="Index" style="margin-bottom: 5px;"><img src="https://i.pinimg.com/originals/99/b0/e5/99b0e593f9237abf16df5cb1b1a87735.png"  width="85" height="85" style="margin-left: 10px;"></a>
+
+
+        
+
+        </nav>
+        <!--/.Navbar-->
+      
+    </header>
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted" style="background-color: #51A058; text-align: center;">
+        <div class="container" style="color: #69402C;">
+            <p>&copy; Tienda Virtual Canevaro - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

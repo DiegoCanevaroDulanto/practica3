@@ -1,0 +1,55 @@
+@model List<Productos>
+
+@{
+    ViewData["Title"] = "Productos";
+}
+
+    <div style="margin-top: 15px;">
+        <ul class="nav nav-tabs dark">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" asp-action="ListaProductos">Lista de Productos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-action="RegistroProductos">Registro de productos</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="text-center">
+        <h2 class="display-4">Productos Recientes</h2>
+
+        @if (Model.Count == 0)
+           {
+             <div class="position-relative">
+                <div class="text-center"><h3>¡Aún no ha efectuado su primer pedido, ingrese a la pestaña de registro!</h3></div>
+             </div>
+              
+          }    
+    </div>
+
+    <div class="container">
+        <div class="row">    
+          
+            @foreach (var productos in Model)
+            {
+
+                <div class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                    <img src="@productos.imagen" class="card-img-top" width="150"px height="200"px>
+                    <div class="card-body">
+                        <label style="text-align: center; font-weight: bold;">@productos.nombre</label>
+                        <label>Descripción del Producto : @productos.descripcion</label><br>
+                        <label>Precio : S/. @productos.precio</label><br>
+                        <label>Celular : @productos.celular</label><br>
+                        <label>Lugar : @productos.lugar</label><br>
+                        <label>Categoria : @productos.categoria</label><br>
+                        <label>Usuario : @productos.usuario</label><br>
+                        
+                    </div>
+                    </div>
+
+                </div>
+
+            }
+        </div>
+    </div>
